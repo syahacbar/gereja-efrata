@@ -91,6 +91,12 @@ $route['download/(\d+)[-\w]+$']='download/detail/$1';
 $route['download']='downloads/list_download/0';
 $route['download/(\d+)/?$']='downloads/list_download/$1';
 
+$route['arsip/(\d+)/?$']='archives_artikel/detail/$1';
+$route['arsip/(\d+)/(\d+)$']='archives_artikel/detail/$1/$2';
+
+$route['arsip/(\d+)[-\w]+$']='archives_artikel/detail/$1';
+$route['arsip/(\d+)[-\w]+/(\d+)$']='archives_artikel/detail/$1/$2';
+
 $route['kategori/(\d+)/?$']='kategori_artikel/detail/$1';
 $route['kategori/(\d+)/(\d+)$']='kategori_artikel/detail/$1/$2';
 

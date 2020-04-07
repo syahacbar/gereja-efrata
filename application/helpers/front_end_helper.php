@@ -196,10 +196,7 @@ function format_tanggal($tanggal,$jam=false){
  	case '12':
  		$tanggal_terbentuk.=" Desember";
  		break;
-
-
-
- }
+ 	}
 
  $tanggal_terbentuk.=" ".$set1[0];
 
@@ -214,6 +211,76 @@ function cuma_tanggal($date){
 	$pecah=explode(" ",$date);
 	return $pecah[0];
 }
+
+function tanggal($date){
+	$pecah=explode(" ",$date);
+	$pecah_tgl=explode("-",$pecah[0]);
+	return $pecah_tgl[2];
+}
+
+function bulan($date){
+	$pecah=explode(" ",$date);
+	$pecah_tgl=explode("-",$pecah[0]);
+
+	switch ($pecah_tgl[1]) {
+		case '01':
+			$bulan=" Januari";
+			break;
+   
+		case '02':
+			$bulan=" Februari";
+			break;
+   
+		case '03':
+			$bulan=" Maret";
+			break;
+   
+		case '04':
+			$bulan=" April";
+			break;
+   
+		case '05':
+			$bulan=" Mei";
+			break;
+   
+		case '06':
+			$bulan=" Juni";
+			break;
+   
+		case '07':
+			$bulan=" Juli";
+			break;
+   
+		case '08':
+			$bulan=" Agustus";
+			break;
+   
+		case '09':
+			$bulan=" September";
+			break;
+   
+		case '10':
+			$bulan=" Oktober";
+			break;
+   
+		case '11':
+			$bulan=" November";
+			break;
+   
+		case '12':
+			$bulan=" Desember";
+			break;
+		}
+
+	return $bulan;
+}
+
+function tahun($date){
+	$pecah=explode(" ",$date);
+	$pecah_tgl=explode("-",$pecah[0]);
+	return $pecah_tgl[0];
+}
+
 
 function cuma_jam($date){
 	$pecah=explode(" ",$date);

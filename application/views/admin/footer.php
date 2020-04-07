@@ -10,7 +10,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
           
         </div>
         <!-- Default to the left -->
-        <strong> Dispersembahkan oleh:  <a href="http://www.sandro.id/" target='_blank'>Sandro ID</a></strong> 
+        <strong> Template by:  <a href="https://adminlte.io/" target='_blank'>AdminLTE</a></strong> 
       </footer>
       
 
@@ -134,20 +134,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
   echo '<script src="'.rpath_adm().'/dist/tinymce/tinymce.min.js" type="text/javascript"></script>';
   ?>
 
-
-<?php  if($npage==1){ ?>
-
-   <script src="<?php path_adm() ?>/flappy/js/phaser.min.js" type="text/javascript"></script>
-   <script src="<?php path_adm() ?>/flappy/game/game.js" type="text/javascript"></script>
-
-   <script type="text/javascript">
-
-      var path="<?php path_adm()  ?>";
-      initFlappy(path+"/flappy");
-
-   </script>
-
-<?php } ?>
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
           Both of these plugins are recommended to enhance the

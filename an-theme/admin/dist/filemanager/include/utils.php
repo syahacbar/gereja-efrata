@@ -520,6 +520,7 @@ function fix_path($path, $transliteration, $convert_spaces = false, $replace_wit
  *
  * @return  string
  */
+/*
 function base_url()
 {
 	return sprintf(
@@ -528,7 +529,7 @@ function base_url()
 		$_SERVER['HTTP_HOST']
 	);
 }
-
+*/
 /**
  * @param  $current_path
  * @param  $fld

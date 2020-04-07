@@ -59,7 +59,7 @@ class AN_admin extends CI_Controller {
 		$data=array(
 				'avatar'=>$this->avatar_user,
 				'path_avatar'=>base_url()."an-component/media/upload-user-avatar/".$this->avatar_user,
-				'title'=>'Apricot CMS- Halaman Utama',
+				'title'=>'Halaman Utama Administrator',
 				'user'=>"$this->name_user",
 				'user_level'=>$this->level_user,
 				'npage'=>1,

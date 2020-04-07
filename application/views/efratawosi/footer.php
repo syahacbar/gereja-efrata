@@ -101,6 +101,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     <!-- ##### Footer Area End ##### -->
 
+   
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="<?php echo assets_url('js/jquery/jquery-2.2.4.min.js') ?>"></script>
@@ -112,6 +113,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo assets_url('js/plugins/plugins.js') ?>"></script>
     <!-- Active js -->
     <script src="<?php echo assets_url('js/active.js') ?>"></script>
+
+    
 </body>
 
 </html>

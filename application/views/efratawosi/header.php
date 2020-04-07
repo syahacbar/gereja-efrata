@@ -16,6 +16,12 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?php echo assets_url('style.css') ?>">
+    
+	<script type="text/javascript" src="<?php echo assets_url('datatables/DataTables/media/js/jquery.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo assets_url('datatables/DataTables/media/js/jquery.dataTables.js') ?>"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo assets_url('datatables/css/bootstrap.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo assets_url('datatables/DataTables/media/css/jquery.dataTables.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo assets_url('datatables/DataTables/media/css/dataTables.bootstrap.css') ?>">
 
 </head>
 

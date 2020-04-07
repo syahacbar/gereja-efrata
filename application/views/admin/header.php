@@ -35,7 +35,7 @@ $levela=($user_level=='1')?"Super Admin":"Admin";
 
   <link href="<?php path_adm() ?>/datepicker/css/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" type="text/css" />    
    
-    <link href="<?php path_adm() ?>/dist/css/skins/skin-yellow.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php path_adm() ?>/dist/css/skins/skin-purple.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php path_adm() ?>/dist/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
     <link href="<?php path_adm() ?>/dist/codemirror/theme/3024-day.css" rel="stylesheet" type="text/css" />
 
@@ -57,7 +57,7 @@ $levela=($user_level=='1')?"Super Admin":"Admin";
     <![endif]-->
   </head>
   
-  <body class="skin-yellow sidebar-mini">
+  <body class="skin-purple sidebar-mini">
 
 
  <div class="wrapper">

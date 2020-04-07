@@ -12,7 +12,6 @@ class Artikel
 
 	}
 
-
 	public function artikel_populer($max=7){
 
 		$cache_artikel_populer=$this->CI->cache->file->get('artikel_populer');
@@ -126,6 +125,70 @@ class Artikel
 		 foto_artikel.nama_foto AS foto
 		 FROM artikel,kategori,user,foto_artikel
 		 WHERE artikel.artikel_kategori='$id_kategori' AND  artikel.artikel_status='publish' AND kategori.aktif='Y' AND kategori.terhapus='N' AND user.status_user='Y' AND user.terhapus='N' AND artikel.artikel_id_user=user.id_user AND artikel.artikel_kategori=kategori.id_kategori AND foto_artikel.id_foto=(SELECT CASE  foto_artikel.featured WHEN 'Y' THEN id_foto WHEN 'N' THEN id_foto END AS 'id_foto'  FROM foto_artikel WHERE foto_artikel.id_artikel=artikel.artikel_id ORDER BY featured ASC LIMIT 1) ORDER BY artikel.artikel_id DESC LIMIT $offset,$limit
+
+		 ");
+
+		return $data->result_array();		
+
+	}
+
+	function artikel_per_bulan($tahun,$bulan){
+
+		$tahun=intval($tahun);
+		$bulan=intval($bulan);
+
+		$data=$this->CI->db->query("SELECT artikel.artikel_id AS id,
+		 artikel.artikel_judul AS judul, 
+		 artikel.artikel_isi AS isi,
+		 artikel.artikel_tgl_posting AS tanggal,
+		 artikel.artikel_dibaca AS dibaca,
+		 artikel.artikel_seo_url AS slug,		 
+		 artikel.artikel_tags as tags,
+		 kategori.id_kategori,
+		 kategori.nama_kategori,
+		 user.nama_lengkap AS nama_admin,
+		 user.id_user AS id_admin,
+		 foto_artikel.nama_foto AS foto
+		 FROM artikel,kategori,user,foto_artikel
+		 WHERE MONTH(artikel.artikel_tgl_posting)='$bulan' AND YEAR(artikel.artikel_tgl_posting)='$tahun' AND  artikel.artikel_status='publish' AND kategori.aktif='Y' AND kategori.terhapus='N' AND user.status_user='Y' AND user.terhapus='N' AND artikel.artikel_id_user=user.id_user AND artikel.artikel_kategori=kategori.id_kategori AND foto_artikel.id_foto=(SELECT CASE  foto_artikel.featured WHEN 'Y' THEN id_foto WHEN 'N' THEN id_foto END AS 'id_foto'  FROM foto_artikel WHERE foto_artikel.id_artikel=artikel.artikel_id ORDER BY featured ASC LIMIT 1) ORDER BY artikel.artikel_id DESC
+		 ");
+
+		return $data->result_array();		
+
+	}
+
+	function arsip_artikel($limit){
+		$limit=intval($limit);
+
+		$data=$this->CI->db->query("SELECT DISTINCT DATE_FORMAT(a.artikel_tgl_posting,'%M %Y') AS arsip,
+		YEAR(a.artikel_tgl_posting) AS tahun,
+		MONTH(a.artikel_tgl_posting) AS bulan,
+		(SELECT COUNT(artikel_id) FROM artikel WHERE artikel_aktif='Y' AND YEAR(artikel_tgl_posting)=YEAR(a.artikel_tgl_posting) AND MONTH(artikel_tgl_posting)=MONTH(a.artikel_tgl_posting)) AS jumlah
+		FROM artikel a WHERE a.artikel_aktif='Y' LIMIT $limit");
+		
+		return $data->result_array();	
+	}
+
+	function artikel_per_user($id_user,$limit,$offset){
+
+		$id_user=intval($id_user);
+		$limit=intval($limit);
+		$offset=intval($offset);
+
+		$data=$this->CI->db->query("SELECT artikel.artikel_id AS id,
+		 artikel.artikel_judul AS judul, 
+		 artikel.artikel_isi AS isi,
+		 artikel.artikel_tgl_posting AS tanggal,
+		 artikel.artikel_dibaca AS dibaca,
+		 artikel.artikel_seo_url AS slug,		 
+		 artikel.artikel_tags as tags,
+		 kategori.id_kategori,
+		 kategori.nama_kategori,
+		 user.nama_lengkap AS nama_admin,
+		 user.id_user AS id_admin,
+		 foto_artikel.nama_foto AS foto
+		 FROM artikel,kategori,user,foto_artikel
+		 WHERE artikel.id_user='$id_user' AND  artikel.artikel_status='publish' AND kategori.aktif='Y' AND kategori.terhapus='N' AND user.status_user='Y' AND user.terhapus='N' AND artikel.artikel_id_user=user.id_user AND artikel.artikel_kategori=kategori.id_kategori AND foto_artikel.id_foto=(SELECT CASE  foto_artikel.featured WHEN 'Y' THEN id_foto WHEN 'N' THEN id_foto END AS 'id_foto'  FROM foto_artikel WHERE foto_artikel.id_artikel=artikel.artikel_id ORDER BY featured ASC LIMIT 1) ORDER BY artikel.artikel_id DESC LIMIT $offset,$limit
 
 		 ");
 
@@ -294,6 +357,14 @@ class Artikel
 
 	}
 
+	function tag_random($limit){
+
+		$data=$this->CI->db->query("SELECT id_tag AS tags FROM tags ORDER BY RAND() LIMIT $limit");
+
+		return $data->result_array();		
+
+	}
+
 	function hitung_semua_artikel(){
 
 		$data=$this->CI->db->query("SELECT artikel.artikel_id AS id,
@@ -319,7 +390,6 @@ class Artikel
 
 		$id=intval($id);
 
-
 		$data=$this->CI->db->query("SELECT artikel.artikel_id AS id,
 		 artikel.artikel_judul AS judul, 
 		 artikel.artikel_isi AS isi,
@@ -341,7 +411,8 @@ class Artikel
 		 kategori.nama_kategori,
 		 user.nama_lengkap AS nama_admin,
 		 user.id_user AS id_admin,
-		 foto_artikel.nama_foto AS foto
+		 foto_artikel.nama_foto AS foto,
+		 user.avatar_user AS foto_user
 		 FROM artikel,kategori,user,foto_artikel
 		 WHERE artikel.artikel_id='$id' AND artikel.artikel_status='publish' AND kategori.aktif='Y' AND kategori.terhapus='N' AND user.status_user='Y' AND user.terhapus='N' AND artikel.artikel_id_user=user.id_user AND artikel.artikel_kategori=kategori.id_kategori AND foto_artikel.id_foto=(SELECT CASE  foto_artikel.featured WHEN 'Y' THEN id_foto WHEN 'N' THEN id_foto END AS 'id_foto'  FROM foto_artikel WHERE foto_artikel.id_artikel=artikel.artikel_id ORDER BY featured ASC LIMIT 1) ");
 
@@ -376,7 +447,21 @@ class Artikel
 
 	}
 
+	public function komentar($artikel_id){
+		$data=$this->CI->db->query("SELECT * FROM komentar k 
+		JOIN jemaat j ON j.nij=k.user_id 
+		JOIN artikel a ON a.artikel_id=k.artikel_id 
+		WHERE k.artikel_id='$artikel_id' AND parent='0'");
+		return $data;
+	}
 
+	public function komentar_child($artikel_id, $parent_id){
+		$data=$this->CI->db->query("SELECT * FROM komentar k 
+		JOIN jemaat j ON j.nij=k.user_id  
+		JOIN artikel a ON a.artikel_id=k.artikel_id 
+		WHERE k.artikel_id='$artikel_id' AND parent<>'0' AND parent='$parent_id'");
+		return $data;
+	}
 
 	function dibaca($id){
 		$id=intval($id);		

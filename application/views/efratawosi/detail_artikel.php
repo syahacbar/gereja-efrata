@@ -198,19 +198,19 @@
                             </div>
                                 <?php } ?>
                         </div>
-
+ 
                        
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h6>Popular Tags</h6>
+                                <h6>Tag Populer</h6>
                             </div>
                             <!-- Tags -->
                             <ol class="popular-tags d-flex flex-wrap">
                             <?php 
-                            foreach($artikel_headline as $artikel){
-                                foreach($artikel['tags'] as $tag) { 
+                            foreach ($tag_random  as $artikel) {
+                                foreach(ambil_tag($artikel['tags']) as $tag){
                             ?>
                                 <li><a href="<?php echo tag_url($tag['id_tag'],$tag['slug_tag']);?>"><?php echo $tag['nama_tag'];?></a></li>
                             <?php } } ?>

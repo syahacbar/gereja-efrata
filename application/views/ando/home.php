@@ -6,7 +6,7 @@
             		<div class="sl-slider"> 
 
 
-            		<?php
+            		<?php 
 
             		$banner_hitung=0;
             		foreach ($banner_depan as $key => $value) {

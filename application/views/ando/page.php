@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?> 
-
+ 
 
 	<div class='col-md-12' id="header-page">
 			<h1><span><?php echo $heading; ?></span></h1>

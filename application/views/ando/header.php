@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('Eiits! Jangan coba coba Mblo!!!!');
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id-ID" prefix="og: http://ogp.me/ns#">
 <head>
 	<title><?php echo $informasi["title"] ?></title>

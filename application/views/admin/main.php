@@ -194,46 +194,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   
 
-  <div class="row">
-    <div class="col-md-4 col-xs-12">
-
-        <div class="box box-warning">
-          <div class="box-header with-border">
-            Artikel Admin
-          </div>
-          <div class="box-body">
-       <canvas id="chart-area" height="300" width="300"></canvas>
-
-          </div>
-          <div class="box-footer"></div>
-        </div>
-
-
-
-       
-
-    </div>   
-
-    <div class="col-md-8 col-xs-12"> 
-
-    <div class="box box-danger">
-          <div class="box-header with-border">
-            Hiburan
-          </div>
-          <div class="box-body">
-
-     <div id="flappy-bird-reborn"></div>
-
-
-          </div>
-          <div class="box-footer"></div>
-        </div>
-
-
-
-
-    </div> 
-  </div>
 
 
         </section><!-- /.content -->
