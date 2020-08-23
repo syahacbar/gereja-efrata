@@ -451,7 +451,7 @@ class Artikel
 		$data=$this->CI->db->query("SELECT * FROM komentar k 
 		JOIN jemaat j ON j.nij=k.user_id 
 		JOIN artikel a ON a.artikel_id=k.artikel_id 
-		WHERE k.artikel_id='$artikel_id' AND parent='0'");
+		WHERE k.artikel_id='$artikel_id' AND parent='0' AND published='1'");
 		return $data;
 	}
 
@@ -459,7 +459,7 @@ class Artikel
 		$data=$this->CI->db->query("SELECT * FROM komentar k 
 		JOIN jemaat j ON j.nij=k.user_id  
 		JOIN artikel a ON a.artikel_id=k.artikel_id 
-		WHERE k.artikel_id='$artikel_id' AND parent<>'0' AND parent='$parent_id'");
+		WHERE k.artikel_id='$artikel_id' AND parent<>'0' AND parent='$parent_id' AND published='1'");
 		return $data;
 	}
 

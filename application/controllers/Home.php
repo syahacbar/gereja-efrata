@@ -20,8 +20,6 @@ class Home extends AN_Apricot{
 		$data["informasi"]["uniqueid"]="home-page";
 
 		$data["informasi"]["og-title"]=$data["informasi"]["title"];
-		
-
 
 		$data["banner_depan"]=$this->banner_depan->banner;
 		$data["artikel_headline"]=$this->artikel->artikel_headline($this->system_info["max_headline_artikel"]);

@@ -12,22 +12,20 @@ class Login extends AN_Apricot {
         $this->login=$this->session->userdata('login');	
         //panggil helper	
 		$this->load->helper(array('filter','url','text'));
-		$this->load->model("admin/myuser","user");
-        $this->load->model("admin/otorisasi");
+		$this->load->model("Myuser_jemaat","user");
         
-        $this->login= $this->user->set($this->session->userdata('id_user'),$this->session->userdata('name_user'),$this->session->userdata('password_user'));
+        $this->login= $this->user->set($this->session->userdata('nij'),$this->session->userdata('nama'),$this->session->userdata('password'));
 		
-			$this->id_user=$this->user->id;
-			$this->name_user=$this->user->name;
-			$this->password_user=$this->user->password;
-			$this->level_user=$this->user->level;
+			$this->nij=$this->user->nij;
+			$this->nama=$this->user->nama;
+			$this->password=$this->user->password;
 			$this->avatar_user=$this->user->avatar;
     } 
 
     function index($x='')
     {
         if($this->login){
-            redirect('admin');
+            redirect('/');
         }
         
         $data['status']=$x;
@@ -37,7 +35,7 @@ class Login extends AN_Apricot {
     function signin() 
     {
         if($this->input->post()){
-            $user=$this->input->post('username');
+            $user=$this->input->post('nij');
             $pass=sha1(md5($this->input->post('password')));
 
             //$cari=$this->db->get_where("user",array("name_user"=>$user,"status_user"=>"Y","terhapus"=>"N"));

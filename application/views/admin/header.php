@@ -178,7 +178,7 @@ $levela=($user_level=='1')?"Super Admin":"Admin";
 
 
             <li class="header">Navigasi</li>
-            <li class='<?php if($npage==1){ echo'active';} ?>'><a href="<?php echo $burl; ?>"><i class='fa fa-dashboard'></i> <span>Halaman Utama</span></a> </li>
+            <li class='<?php if($npage==1){ echo'active';} ?>'><a href="<?php echo $burl; ?>"><i class='fa fa-laptop'></i> <span>Halaman Utama</span></a> </li>
             
             <li class='treeview  <?php if(($npage==6) OR( $npage==7)){ echo'active';} ?>'>
               <a href='#'><i class='fa fa-pencil-square'></i><span>Artikel</span><i class="fa fa-angle-left pull-right"></i></a>
@@ -252,7 +252,17 @@ $levela=($user_level=='1')?"Super Admin":"Admin";
                 
               </ul>
             </li>
-
+            <?php if($user_level=='1'){    ?>
+            <li class='header'>Manajemen Anggota</li>
+            <li class='treeview <?php if($npage==55 || $npage==56){ echo'active';} ?>'><a href="#"><i class='fa  fa-users'></i><span>Jemaat</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">                
+                <li class='<?php if($npage==55){ echo'active';} ?>'><a href="#"><i class='fa fa-circle-o'></i><span>Semua Jemaat</span></a></li>
+                <li class='<?php if($npage==56){ echo'active';} ?>'><a href="#"><i class='fa fa-circle-o'></i><span>Jemaat Baru</span></a></li>
+                
+              </ul>
+            </li>
+            <li class='<?php if($npage==57){ echo'active';} ?>'><a href="#"><i class='fa fa-list-alt'></i><span>Komentar</span></a></li>
+            <?php } ?>
             <li class='header'>Pengaturan</li>
 
            <?php if($user_level=='1'){    ?>
@@ -315,15 +325,6 @@ $levela=($user_level=='1')?"Super Admin":"Admin";
             </li>
 
 
-           <li class="header">Informasi</li>
-
-       <li class='<?php if($npage==23){ echo'active';} ?>'><a href="<?php echo $burl; ?>/kontak_masuk"><i class='fa fa-paper-plane-o'></i> <span>Kotak Masuk</span></a> </li>
-
-              <?php if($user_level=='1'){
-                  ?>
-       <li class='<?php if($npage==32){ echo'active';} ?>'><a href="<?php echo $burl; ?>/smtp_email"><i class='fa fa-paper-plane-o'></i> <span>SMTP Email</span></a> </li>
-                <?php }
-               ?>      
 
                  <li class="header">Cache</li>
                  <li>

@@ -39,7 +39,7 @@
 					
 					
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username">
+						<input class="input100" type="text" name="nij">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Nomor Induk Jemaat</span>
 					</div>
