@@ -23,7 +23,7 @@
 	<meta property="article:published_time" content="<?php echo $informasi['article-published_time']; ?>" />
     <?php } ?>
   <!-- Favicons -->
-  <link href="<?php echo assets_url('assets/img/favicon.png');?>" rel="icon">
+  <link href="<?php echo $informasi['favicon'] ?>" rel="icon">
   <link href="<?php echo assets_url('assets/img/apple-touch-icon.png');?>" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
