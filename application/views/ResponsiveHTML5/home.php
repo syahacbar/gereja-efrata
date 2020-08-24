@@ -711,13 +711,13 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Kontak Kami</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
       </div>
 
       <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3684528946455!2d134.04449211427277!3d-0.8604139355513782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d540a69a677ae3b%3A0x76a030269ba332d8!2sGereja%20GKI%20Efrata%20Wosi!5e0!3m2!1sid!2sid!4v1598269267473!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="container">
