@@ -13,8 +13,8 @@
             Manokwari Barat,<br> 
             Kabupaten Manokwari,<br> 
             Papua Barat. 98312 <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> (0986) 215608<br>
+              <strong>Email:</strong> majelis@gkijefsi.or.id<br>
             </p>
           </div>
 

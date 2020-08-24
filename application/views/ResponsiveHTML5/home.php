@@ -4,7 +4,7 @@
     <div class="container">
       <h1>Selamat Datang</h1>
       <h2>Di Situs Resmi GKI Jemaat Efrata Wosi</h2>
-      <a href="#" class="btn-get-started scrollto">Jadwal Ibadah</a>
+      <a href="#" class="btn-get-started scrollto"><i class="bx bx-calendar"></i>Jadwal Ibadah</a>
     </div>
   </section><!-- End Hero -->
 
@@ -722,13 +722,13 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>majelis@gkijefsi.or.id</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <p>+62 5589 55488 55s</p>
+                <p> (0986) 215608</p>
               </div>
 
             </div>

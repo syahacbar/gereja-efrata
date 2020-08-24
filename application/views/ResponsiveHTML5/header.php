@@ -56,8 +56,8 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="icofont-phone"></i> +1 5589 55488 55
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">majelis@gkijefsi.or.id</a>
+        <i class="icofont-phone"></i> (0986) 215608
         <i class="icofont-google-map"></i> JL Pertanian Wosi, Manokwari Barat, Kabupaten Manokwari, Papua Barat. 98312
       </div>
       <div class="social-links">
