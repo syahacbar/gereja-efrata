@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h3>GKI Jemaat Efrata Wosi</h3>
             <p>
             JL Pertanian Wosi, <br>
@@ -19,32 +19,35 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Menu Utama</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Profil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Galeri</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Berita</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Agenda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak Kami</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Pelayanan</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PAM</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sekolah Minggu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pernikahan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Baptis</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sidi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lainnya ...</a></li>
             </ul>
           </div>
+          
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>Dapatkan Warta Jemaat</h4>
+            <p>Warta Jemaat GKI Efrata Wosi akan diterbitkan setiap minggu. Masukkan alamat email dan klik tombol berlangganan</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Berlangganan">
             </form>
           </div>
 
