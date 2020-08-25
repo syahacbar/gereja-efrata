@@ -74,7 +74,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html"><img src="<?php echo $informasi["logo"]; ?>" height="50"></a></h1>
+      <h1 class="logo mr-auto"><a href="<?php echo baseURL(); ?>"><img src="<?php echo $informasi["logo"]; ?>" height="50"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
