@@ -96,7 +96,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    <section id="jemaat" class="counts">
       <div class="container">
       <div class="section-title">
           <h2>Jemaat</h2>
@@ -159,7 +159,7 @@
 
 
     <!-- ======= Departments Section ======= -->
-    <section id="jemaat" class="departments">
+    <section id="pelayanan" class="departments">
       <div class="container">
 
         <div class="section-title">
